@@ -1,0 +1,10 @@
+#!C:\Users\81903\Desktop\dmm生成AIキャンプ\dmm_vscode\final_issue_1\company_inner_search_app\py311_final_issue_1\Scripts\python.exe
+
+import docx2txt
+
+if __name__ == '__main__':
+    import sys
+    args = docx2txt.process_args()
+    text = docx2txt.process(args.docx, args.img_dir)
+    output = getattr(sys.stdout, 'buffer', sys.stdout)
+    output.write(text.encode('utf-8'))
