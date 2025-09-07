@@ -11,7 +11,7 @@ from logging.handlers import TimedRotatingFileHandler
 from uuid import uuid4
 import sys
 import unicodedata
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 import streamlit as st
 from docx import Document
 from langchain_community.document_loaders import WebBaseLoader
@@ -215,7 +215,7 @@ def recursive_file_check(path, docs_all):
     else:
         print("y1b")
         print("★★",path)
-        path = Path(path).resolve()
+        #path = Path(path).resolve()
         print("★★★",path)
         print("path:",os.path.exists(path))
         #print("■■",docs_all)
